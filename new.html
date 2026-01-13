@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI Personal Loan Assistant | Tata Capital</title>
+
+<style>
+/* ===== RESET ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "Inter","Segoe UI",system-ui,sans-serif;
+  background:
+    radial-gradient(circle at top left,#fff9c9 0%,#FFF8C6 8%,#FFFCE6 20%,#FFFFFF 70%);
+  min-height: 100vh;
+  color: #333;
+}
+
+/* ===== UTILITY BAR ===== */
+.utility-bar {
+  background: linear-gradient(80deg,#fff8b5 0%,#fffbdf 50%,#ffffff 100%);
+  font-size: 13px;
+}
+.utility-container {
+  max-width: 1280px;
+  margin: auto;
+  padding: 10px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.utility-actions { display: flex; gap: 20px; }
+.utility-actions a { text-decoration: none; color: #000; }
+.lang-btn {
+  border: 1px solid #000;
+  padding: 6px 12px;
+  border-radius: 10px;
+  background: transparent;
+  font-size: 12px;
+}
+
+/* ===== NAV ===== */
+.top-nav {
+  background: #1F67AF;
+  max-width: 1320px;
+  margin: 4px auto 8px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+.nav-container {
+  max-width: 1280px;
+  margin: auto;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brand-logo-main {
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff;
+}
+.brand-logo-accent {
+  height: 3px;
+  background: yellow;
+  margin-top: 4px;
+}
+.nav-menu { list-style: none; display: flex; gap: 32px; }
+.nav-menu a { color: #fff; text-decoration: none; font-size: 14px; }
+.login-btn {
+  background: yellow;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+/* ===== MAIN ===== */
+main {
+  max-width: 1280px;
+  margin: auto;
+  padding: 20px 40px 80px;
+}
+.page-header {
+  text-align: center;
+  margin-bottom: 16px;
+}
+.page-header p { color: #000000; }
+
+/* ===== CHAT WRAPPER ===== */
+.chat-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== CHAT BOX ===== */
+.chat-container {
+  width: 600px;
+  height: 500px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #E5E5E5;
+}
+
+/* Header */
+.chat-header {
+  background: #1F67AF;
+  color: #fff;
+  padding: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Messages */
+.chat-messages {
+  flex: 1;
+  padding: 18px;
+  background: #F9FAFB;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Message bubbles */
+.message {
+  max-width: 75%;
+  padding: 12px 14px;
+  font-size: 14px;
+  border-radius: 14px;
+  line-height: 1.5;
+}
+.message.user {
+  align-self: flex-end;
+  background: #DCEBFF;
+  border-bottom-right-radius: 4px;
+}
+.message.bot {
+  align-self: flex-start;
+  background: #EDEFF2;
+  border-bottom-left-radius: 4px;
+}
+
+/* Input */
+.chat-input {
+  padding: 14px;
+  border-top: 1px solid #E0E0E0;
+  background: #fff;
+  display: flex;
+  gap: 10px;
+}
+.chat-input input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #CCC;
+}
+.chat-input button {
+  background: #1F67AF;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.chat-input button:hover { color: yellow; }
+
+/* Scroll */
+.chat-messages::-webkit-scrollbar { width: 6px; }
+.chat-messages::-webkit-scrollbar-thumb {
+  background: #CCC;
+  border-radius: 3px;
+}
+
+/* Footer */
+.page-footer {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 12px;
+  color: #888;
+}
+</style>
+</head>
+
+<body>
+
+<div class="utility-bar">
+  <div class="utility-container">
+    <span>Get the Tata Capital App to apply for Loans & manage your account</span>
+    <div class="utility-actions">
+      <a href="#">Blogs</a>
+      <a href="#">Support</a>
+      <button class="lang-btn">ENGLISH ▾</button>
+    </div>
+  </div>
+</div>
+
+<nav class="top-nav">
+  <div class="nav-container">
+    <div>
+      <div class="brand-logo-main">TATA CAPITAL</div>
+      <div class="brand-logo-accent"></div>
+    </div>
+    <ul class="nav-menu">
+      <li><a href="#">Loans for You</a></li>
+      <li><a href="#">Loans for Business</a></li>
+      <li><a href="#">Investment</a></li>
+      <li><a href="#">Insurance</a></li>
+      <li><a href="#">Apply</a></li>
+    </ul>
+    <button class="login-btn">Login</button>
+  </div>
+</nav>
+
+<main>
+  <div class="page-header">
+    <p>Chat with us to check eligibility and get instant guidance</p>
+  </div>
+
+  <div class="chat-wrapper">
+    <div class="chat-container">
+      <div class="chat-header">Tia – Your Personal Loan Assistant</div>
+
+      <div id="chat" class="chat-messages">
+        <div class="message bot">
+          Hi! 👋 I’m here to help you with your loan. How can I assist you today?
+        </div>
+      </div>
+
+      <div class="chat-input">
+        <input type="text" id="input" placeholder="Type your message..." />
+        <button onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="page-footer">
+    Powered by Tata Capital AI Technology | Secure & Confidential
+  </footer>
+</main>
+
+<script>
+const chat = document.getElementById("chat");
+const input = document.getElementById("input");
+const API_URL = "https://gf749rhbd3.execute-api.us-east-1.amazonaws.com/chat";
+const sessionId = "web-user-" + Math.floor(Math.random() * 100000);
+
+function addMessage(text, sender) {
+  const msg = document.createElement("div");
+  msg.className = `message ${sender}`;
+  msg.innerHTML = text;
+  chat.appendChild(msg);
+  chat.scrollTop = chat.scrollHeight;
+}
+
+async function sendMessage() {
+  const text = input.value.trim();
+  if (!text) return;
+  addMessage(text, "user");
+  input.value = "";
+
+  try {
+    const res = await fetch(API_URL, {
+      method: "POST",
+      headers: {"Content-Type":"application/json"},
+      body: JSON.stringify({ message: text, sessionId })
+    });
+    const data = await res.json();
+    addMessage(data.reply || "Sorry, something went wrong.", "bot");
+  } catch {
+    addMessage("Unable to connect to server.", "bot");
+  }
+}
+
+input.addEventListener("keydown", e => {
+  if (e.key === "Enter") sendMessage();
+});
+</script>
+
+</body>
+</html>
