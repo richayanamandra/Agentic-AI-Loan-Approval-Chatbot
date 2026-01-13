@@ -351,7 +351,7 @@ def lambda_handler(event, context):
             sid,
         )
 
-    # ---------- SANCTION ----------
+    # ---------- SANCTION Letter ----------
     if state["stage"] == "SANCTION":
         state["stage"] = "DONE"
         SESSION_STATE[sid] = state
