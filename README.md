@@ -1,7 +1,6 @@
 ## 📌 Project Title
 
-Agentic AI Pipeline for Task Automation and Decision Support
-(Rename this to your exact project title)
+Agentic-AI Loan Approval Chatbot
 
 ## 📖 Overview
 
