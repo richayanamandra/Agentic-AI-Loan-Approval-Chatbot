@@ -32,18 +32,6 @@ Reproducible experiments
 ![System Architecture Diagram](Architecture.jpeg)
 
 
-## 📊 Evaluation Metrics
-
-The system is evaluated using:
-
-Task completion rate
-
-Accuracy / relevance score
-
-Latency per task
-
-Iteration efficiency (improvement over feedback cycles)
-
 ## 🧪 Experiments
 
 Multiple task scenarios tested
