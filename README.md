@@ -1,6 +1,4 @@
-## 📌 Project Title
-
-Agentic-AI Loan Approval Chatbot
+## 📌 Agentic-AI Loan Approval Chatbot
 
 ## 📖 Overview
 
