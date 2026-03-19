@@ -31,6 +31,9 @@ Reproducible experiments
 ## 🏗️ System Architecture
 ![System Architecture Diagram](Architecture.jpeg)
 
+## Landing Page
+<img width="1833" height="880" alt="image" src="https://github.com/user-attachments/assets/44e72244-545f-431e-b03a-427ee4d1a5b6" />
+
 
 ## 🧪 Experiments
 
